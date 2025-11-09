@@ -4,33 +4,24 @@ class SnakeAndLadderGame
 {
     static void Main(string[] args)
     {
-
         Console.WriteLine("Snake and Ladder Game\n");
         StartGame();
         rollDie();
-
-        
     }
 
     // Method to start the game
-
     static void StartGame()
     {
-        Random random = new Random();
         int playerPosition = 0;
-
         Console.WriteLine("\nPlayer starts at position: " + playerPosition);
     }
 
-    // Method to roll a dice
-
+    // Method to roll a die
     static int rollDie()
     {
         Random random = new Random();
-        int dieValue = random.Next(1,7);
-        Console.WriteLine("Player rolled the dice and got: " + dieValue);
+        int dieValue = random.Next(1, 7);
+        Console.WriteLine("Player rolled the die and got: " + dieValue);
         return dieValue;
     }
-
-    
 }
