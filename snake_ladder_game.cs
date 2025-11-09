@@ -4,7 +4,7 @@ class SnakeAndLadderGame
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("=== UC1: Snake and Ladder Game ===\n");
+        Console.WriteLine("Snake and Ladder Game \n");
         StartGame();
 
 
