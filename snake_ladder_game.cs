@@ -7,6 +7,7 @@ class SnakeAndLadderGame
 
         Console.WriteLine("Snake and Ladder Game\n");
         StartGame();
+        rollDie();
 
         
     }
@@ -19,8 +20,16 @@ class SnakeAndLadderGame
         int playerPosition = 0;
 
         Console.WriteLine("\nPlayer starts at position: " + playerPosition);
+    }
 
-        
+    // Method to roll a dice
+
+    static int rollDie()
+    {
+        Random random = new Random();
+        int dieValue = random.Next(1,7);
+        Console.WriteLine("Player rolled the dice and got: " + dieValue);
+        return dieValue;
     }
 
     
