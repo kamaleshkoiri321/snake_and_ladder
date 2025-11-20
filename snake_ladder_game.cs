@@ -3,6 +3,7 @@
 class SnakeAndLadderGame
 {
     static int playerPosition = 0;
+    static int diceRollCount = 0; // UC6: number of dice rolls
 
     static void Main(string[] args)
     {
@@ -22,6 +23,7 @@ class SnakeAndLadderGame
     static void StartGame()
     {
         playerPosition = 0;
+        diceRollCount = 0; // Reset dice roll count on new game start
         Console.WriteLine("Player starts at position: " + playerPosition);
     }
 
@@ -30,7 +32,8 @@ class SnakeAndLadderGame
     {
         Random random = new Random();
         int dieValue = random.Next(1, 7);
-        Console.WriteLine("Player rolled the die and got: " + dieValue);
+        diceRollCount++; // increment count
+        Console.WriteLine($"Player rolled the die ({diceRollCount}): {dieValue}");
         return dieValue;
     }
 
