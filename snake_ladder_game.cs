@@ -8,24 +8,22 @@ class SnakeAndLadderGame
     {
         Console.WriteLine("Snake and Ladder Game\n");
 
-        StartGame();      //  Start the game
+        StartGame();
 
-        int dieValue = rollDie();  //  Roll the die
-        CheckOption(dieValue);     // Check options for die value
+        int dieValue = rollDie();
+        CheckOption(dieValue);
 
-        PlayTillWin();    //  Repeat till winning position 100 with all logic inside
-
-        
+        PlayTillWin();
     }
 
-    //  Method to start the game
+    // Method to start the game
     static void StartGame()
     {
         playerPosition = 0;
         Console.WriteLine("Player starts at position: " + playerPosition);
     }
 
-    //  Method to roll a die
+    // Method to roll a die
     static int rollDie()
     {
         Random random = new Random();
@@ -34,7 +32,7 @@ class SnakeAndLadderGame
         return dieValue;
     }
 
-    //  Method to Check Option and update position accordingly
+    // Method to Check Option and update position accordingly
     static void CheckOption(int dieValue)
     {
         Random random = new Random();
@@ -65,10 +63,11 @@ class SnakeAndLadderGame
                 playerPosition = 0;
             }
         }
+
         Console.WriteLine("Current Player position: " + playerPosition + "\n");
     }
 
-    //Method to repeat turns till player reaches 100
+    // Method to repeat turns till player reaches 100
     static void PlayTillWin()
     {
         while (playerPosition < 100)
