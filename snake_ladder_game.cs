@@ -14,6 +14,8 @@ class SnakeAndLadderGame
         CheckOption(dieValue);
 
         PlayTillWin();
+
+        EnsureExactWin();
     }
 
     // Method to start the game
@@ -32,7 +34,7 @@ class SnakeAndLadderGame
         return dieValue;
     }
 
-    // Method to Check Option and update position accordingly
+    // Method to Check Option and update player position accordingly
     static void CheckOption(int dieValue)
     {
         Random random = new Random();
@@ -77,5 +79,27 @@ class SnakeAndLadderGame
         }
 
         Console.WriteLine("Player reached the winning position 100! Game over.");
+    }
+
+    // Method to ensure player reaches exactly 100
+    static void EnsureExactWin()
+    {
+        while (playerPosition != 100)
+        {
+            int dieValue = rollDie();
+
+            if (playerPosition + dieValue == 100)
+            {
+                playerPosition += dieValue;
+                Console.WriteLine($"Player moved exactly to position: {playerPosition}");
+            }
+            else
+            {
+                Console.WriteLine($"Player rolled {dieValue} but cannot move without exceeding 100. Waiting for exact roll.");
+            }
+            Console.WriteLine();
+        }
+
+        Console.WriteLine("Player reached the exact winning position 100! Game over.");
     }
 }
