@@ -8,18 +8,18 @@ class SnakeAndLadderGame
 
         StartGame();
 
-        int dieValue = rollDie();   
-        CheckOption(dieValue);      
+        int dieValue = rollDie();
+        CheckOption(dieValue);
     }
 
-    // Method to start the game 
+    // Method to start the game
     static void StartGame()
     {
         int playerPosition = 0;
         Console.WriteLine("\nPlayer starts at position: " + playerPosition);
     }
 
-    // Method to roll a die 
+    // Method to roll a die
     static int rollDie()
     {
         Random random = new Random();
@@ -32,7 +32,7 @@ class SnakeAndLadderGame
     static void CheckOption(int dieValue)
     {
         Random random = new Random();
-        int option = random.Next(0, 3);   
+        int option = random.Next(0, 3);
 
         if (option == 0)
         {
